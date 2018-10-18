@@ -1,8 +1,10 @@
 <scroll-view class="container" style="height: 100%;">
   <view class="search-header">
     <view class="input-box">
+    <!--[xiugai] 这里需要把图放在我们服务器上--> 
       <image class="icon" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/search2-2fb94833aa.png"></image>
       <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="onKeywordConfirm" confirm-type="search" placeholder="{{defaultKeyword.keyword}}" />
+    <!--[xiugai] 这里需要把图放在我们服务器上--> 
       <image class="del" wx:if="{{keyword}}" bindtap="clearKeyword" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/clearIpt-f71b83e3c2.png"></image>
     </view>
     <view class="right" bindtap="closeSearch">取消</view>
@@ -11,6 +13,7 @@
       <view class="serach-keywords search-history" wx:if="{{!keyword  && historyKeyword.length}}">
     <view class="h">
       <text class="title">历史记录</text>
+    <!--[xiugai] 这里需要把图放在我们服务器上--> 
       <image class="icon" bindtap="clearHistory" src="http://nos.netease.com/mailpub/hxm/yanxuan-wap/p/20150730/style/img/icon-normal/del1-93f0a4add4.png"></image>
     </view>
     <view class="b">
@@ -59,6 +62,7 @@
   </view>
 
   <view class="search-result-empty" wx:if="{{!goodsList.length && searchStatus}}">
+    <!--[xiugai] 这里需要把图放在我们服务器上--> 
     <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noSearchResult-7572a94f32.png"></image>
     <text class="text">您寻找的商品还未上架</text>
   </view>

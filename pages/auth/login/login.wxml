@@ -16,6 +16,7 @@
 				<input class="code" value="{{code}}" bindinput="bindCodeInput" placeholder="验证码"/>
 				<image class="clear" id="clear-code" wx:if="{{ code.length > 0 }}" src="/static/images/clear_input.png" catchtap="clearInput"></image>
 			</view>
+    <!--[xiugai] 这里需要设置登录相关的内容--> 
 			<image class="code-img" src="https://dl.reg.163.com/cp?pd=yanxuan_web&pkid=SkeBZeG&random=1489903563234"></image>
 		</view>
 

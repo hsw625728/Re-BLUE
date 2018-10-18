@@ -15,6 +15,7 @@
         </view>
     </view>
     <view class="empty-view" wx:if="{{ addressList.length <= 0 }}">
+    <!--[xiugai] 这里需要把图放在我们服务器上--> 
       <image class="icon" src="http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/noAddress-26d570cefa.png"></image>
       <text class="text">收货地址在哪里</text>
     </view>

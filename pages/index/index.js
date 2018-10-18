@@ -16,8 +16,8 @@ Page({
   },
   onShareAppMessage: function () {
     return {
-      title: 'NideShop',
-      desc: '仿网易严选微信小程序商城',
+      title: 'Re-BLUE',
+      desc: '简易优雅的时尚女人',
       path: '/pages/index/index'
     }
   },
