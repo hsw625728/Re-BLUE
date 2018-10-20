@@ -14,16 +14,17 @@ Page({
     let that = this;
     util.request(api.OrderList).then(function (res) {
       if (res.errno === 0) {
-        console.log(res.data);
         that.setData({
           orderList: res.data.data
         });
       }
     });
   },
-  payOrder(){
+  payOrder(event){
+    let id = event.target.dataset.orderId;
+    let price = event.target.dataset.actualPrice;
     wx.redirectTo({
-      url: '/pages/pay/pay',
+      url: '/pages/pay/pay?orderId=' + id + '&actualPrice=' + price,
     })
   },
   onReady:function(){

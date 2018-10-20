@@ -22,6 +22,7 @@ function formatNumber(n) {
  * 封封微信的的request
  */
 function request(url, data = {}, method = "GET") {
+  console.log("Request:url->\("+url+"\)data->"+data+"\)");
   return new Promise(function (resolve, reject) {
     wx.request({
       url: url,

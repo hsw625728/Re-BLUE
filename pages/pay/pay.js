@@ -1,3 +1,7 @@
+/**
+ * 支付相关服务
+ */
+
 var app = getApp();
 var util = require('../../utils/util.js');
 var api = require('../../config/api.js');
@@ -30,11 +34,16 @@ Page({
 
   },
   //向服务请求支付参数
-  requestPayParam() {
+  requestPayParam(event) {
     let that = this;
-    util.request(api.PayPrepayId, { orderId: that.data.orderId, payType: 1 }).then(function (res) {
+    //util.request(api.PayPrepayId, { orderId: that.data.orderId, payType: 1 }).then(function (res) {
+    console.log("1pay.js requestPayParam() orderId = " + event.target.dataset.orderId);
+    util.request(api.PayPrepayId, { orderId: event.target.dataset.orderId, payType: 1 }).then(function (res) {
+      console.log("2pay.js requestPayParam() orderId = " + event.target.dataset.orderId);
+      console.log(res);
       if (res.errno === 0) {
         let payParam = res.data;
+        console.log(payParam);
         wx.requestPayment({
           'timeStamp': payParam.timeStamp,
           'nonceStr': payParam.timeStamp,
@@ -55,7 +64,8 @@ Page({
       }
     });
   },
-  startPay() {
-    this.requestPayParam();
+  startPay(event) {
+    this.requestPayParam(event);
   }
 })
+

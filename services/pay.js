@@ -9,6 +9,8 @@ const api = require('../config/api.js');
  * 判断用户是否登录
  */
 function payOrder(orderId) {
+
+  console.log("service/pay.js payOrder.orderid = "+orderId);
   return new Promise(function (resolve, reject) {
     util.request(api.PayPrepayId, {
       orderId: orderId
