@@ -1,0 +1,8 @@
+<!--erbgView/goods/goods.wxml-->
+<view class="container">
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{img}}" wx:key="{{img}}">
+      <image src="{{item}}" background-size="cover"></image>
+    </swiper-item>
+  </swiper>
+</view>

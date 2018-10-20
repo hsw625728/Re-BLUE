@@ -1,0 +1,10 @@
+<!--erbgView/index/index.wxml-->
+<view class="container">
+  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{banner}}" wx:key="{{item.goodId}}">
+      <navigator url="/erbgView/goods/goods?goodId={{item.goodId}}">
+        <image src="{{item.img}}" background-size="cover"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
