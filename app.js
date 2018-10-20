@@ -6,12 +6,21 @@ App({
   onLaunch: function () {
     //获取用户的登录信息
     user.checkLogin().then(res => {
-      console.log('app login')
       this.globalData.userInfo = wx.getStorageSync('userInfo');
       this.globalData.token = wx.getStorageSync('token');
     }).catch(() => {
-      
+      console.log('app.js checkLogin faild')
     });
+/*
+    user.loginByWeixin().then(res => {
+      this.globalData.userInfo = wx.getStorageSync('userInfo');
+      this.globalData.token = wx.getStorageSync('token');
+      consloe.log('app.js getStorgeSyncInfo:' + this.globalData.userInfo);
+      consloe.log('app.js getStorgeSyncInfo:' + this.globalData.token);
+    }).catch(() => {
+      console.log('app.js loginByWeixin faild')
+    });
+    */
   },
   
   globalData: {

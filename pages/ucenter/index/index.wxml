@@ -3,6 +3,7 @@
     <image class="avatar" src="{{userInfo.avatar}}"></image>
     <view class="info">
       <text class="name">{{userInfo.nickname}}</text>
+      <button open-type="getUserInfo">点击授权</button>
       <!-- <text class="level">{{userInfo.username}}</text> -->
     </view>
   </view>
