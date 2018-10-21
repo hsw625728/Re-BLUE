@@ -1,0 +1,45 @@
+/* erbgComponent/comGoodsGrid.wxss */
+
+.com-good-grid {
+  width: 750rpx;
+  background: #f0f0f0;
+  column-count: 2;
+  column-gap:0 ;
+  padding : 10rpx 10rpx 10rpx 0rpx;
+}
+
+.com-good-grid .grid {
+  background: linear-gradient(to top left, #fafafa , #ffffff);
+  border-radius: 10rpx;
+  margin : 0rpx 0rpx 10rpx 10rpx;
+  -webkit-column-break-inside: avoid;
+  overflow: hidden;
+}
+
+.com-good-grid .a {
+}
+.com-good-grid .a .img{
+  width: 100%;
+}
+.com-good-grid .a .name{
+  display:block;
+  margin: 0rpx 0rpx 0rpx 15rpx;
+  color: #000000;
+  font-size: 26rpx;
+}
+
+.com-good-grid .a .issue_price{
+  display:block;
+  margin: 0rpx 0rpx 0rpx 15rpx;
+  color: #aaaaaa;
+  text-decoration:line-through;
+  font-size: 22rpx;
+}
+
+.com-good-grid .a .retail_price{
+  display:block;
+  margin: 0rpx 0rpx 0rpx 15rpx;
+  color: #ff0000; 
+  font-size: 26rpx;
+}
+

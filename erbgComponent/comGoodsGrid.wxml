@@ -1,0 +1,11 @@
+<!--erbgComponent/comGoodsGrid.wxml-->
+<view class="com-good-grid">
+  <view class="grid" wx:for="{{goodslist}}" wx:for-index="idx" wx:key="{{item.goodsid}}">
+    <navigator url="{{jumpUrl}}{{item.goodsid}}" class="a">
+      <image class="img" src="{{item.img}}" background-size="cover"></image>
+      <text class="name">{{item.name}}</text>
+      <text wx:if="{{item.retail_price!=item.issue_price}}" class="issue_price">￥{{item.issue_price}}</text>
+      <text class="retail_price">￥{{item.retail_price}}</text>
+    </navigator>
+  </view>
+</view>

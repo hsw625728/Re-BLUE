@@ -1,8 +1,18 @@
 <!--erbgView/goods/goods.wxml-->
 <view class="container">
-  <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-    <swiper-item wx:for="{{img}}" wx:key="{{img}}">
+  <swiper class="goodsimgs" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <swiper-item wx:for="{{img}}" wx:key="{{item}}">
       <image src="{{item}}" background-size="cover"></image>
     </swiper-item>
   </swiper>
+</view>
+<view class="bottom-btn">
+  <view class="l l-cart">
+    <view class="box">
+      <text class="cart-count">{{cartGoodsCount}}</text>
+      <image bindtap="openCartPage" class="icon" src="/static/images/ic_menu_shoping_nor.png"></image>
+    </view>
+  </view>
+  <view class="c">加入购物车</view>
+  <view class="r">立即购买</view>
 </view>

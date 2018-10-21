@@ -27,12 +27,16 @@ indexController.prototype.onLoad = function(options, callback)
   let that = this;
   service.wxtoolkit.request(that.serviceUrl).then(function (res) 
   {
-    var banner = [];
-    for (let i in res.banner)
+    that.data = res;
+
+    for (let i in that.data.banner)
     {
-      banner.push({ img: imageToolkit.getImage(res.banner[i].img), goodId: res.banner[i].goodId});
+      that.data.banner[i].img = imageToolkit.getImage(that.data.banner[i].img);
     }
-    that.data.banner = banner;
+    
+    for (let i in that.data.goodslist) {
+      that.data.goodslist[i].img = imageToolkit.getImage(that.data.goodslist[i].img);
+    }
 
     callback();
   }).catch(function (reason) {

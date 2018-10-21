@@ -23,7 +23,7 @@ function indexController(view) {
 
 indexController.prototype.onLoad = function (options, callback) {
   let that = this;
-  service.wxtoolkit.request(that.serviceUrl, { goodsid: options.goodId }).then(function (res) {
+  service.wxtoolkit.request(that.serviceUrl, { goodsid: options.goodsid }).then(function (res) {
     var img = [];
     for (let i in res.img) {
       img.push(imageToolkit.getImage(res.img[i]));

@@ -13,6 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    flag:true
   },
 
   /**
@@ -72,5 +73,10 @@ Page({
       title: 'Re-BLUE',
       desc: '简易优雅的时尚女人'
     }
+  },
+
+  onTap: function()
+  {
+    this.setData({ flag: !this.data.flag});
   }
 })
