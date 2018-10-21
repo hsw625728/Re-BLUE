@@ -43,11 +43,17 @@ Page({
       });
     }, 1000);
   },
-  payOrder() {
+  payOrder(event) {
+    let id = event.target.dataset.orderId;
+    let price = event.target.dataset.actualPrice;
+    wx.redirectTo({
+      url: '/pages/pay/pay?orderId=' + id + '&actualPrice=' + price,
+    })
+    /*
     let that = this;
-    util.request(api.PayPrepayId, {
-      orderId: that.data.orderId || 15
-    }).then(function (res) {
+    console.log(that.data);
+    util.request(api.PayPrepayId, { orderId: that.data.orderId || 15 }).then(function (res) {
+      console.log("orderDetail.js payOrder() "+res.data);
       if (res.errno === 0) {
         const payParam = res.data;
         wx.requestPayment({
@@ -65,7 +71,7 @@ Page({
         });
       }
     });
-
+*/
   },
   onReady: function () {
     // 页面渲染完成
