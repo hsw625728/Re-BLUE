@@ -7,7 +7,4 @@
       </navigator>
     </swiper-item>
   </swiper>
-  <view>
-    <com-good-grid goodslist="{{goodslist}}"></com-good-grid>
-  </view>
 </view>

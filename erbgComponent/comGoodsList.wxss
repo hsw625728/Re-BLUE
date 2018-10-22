@@ -1,0 +1,58 @@
+/* erbgComponent/comGoodsList.wxss */
+.com-good-list {
+  width: 750rpx;
+  padding : 0rpx 6.25rpx 0rpx 6.25rpx;
+}
+
+.com-good-list .cell {
+  width: 100%;
+  height: 280rpx;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 5rpx;
+  margin : 6.25rpx 0rpx 0rpx 0rpx;
+  -webkit-column-break-inside: avoid;
+  overflow: hidden;
+}
+
+.com-good-list .cell .a {
+}
+.com-good-list .cell .a .img{
+  float:left;
+  width: 280rpx;
+  height: 280rpx;
+  border-radius: 5rpx;
+}
+
+.com-good-list .cell .a .info{
+  float: right;
+  width: 100%;
+  margin-left:-200px;
+  padding-left: 280rpx;
+  height: 280rpx;
+  -webkit-column-break-inside: avoid;
+}
+
+
+.com-good-list .cell .a .name{
+  display:block;
+  margin: 0rpx 0rpx 0rpx 15rpx;
+  color: #000000;
+  font-size: 26rpx;
+}
+
+.com-good-list .cell .a .issue_price{
+  display:block;
+  margin: 0rpx 0rpx 0rpx 15rpx;
+  color: #aaaaaa;
+  text-decoration:line-through;
+  font-size: 22rpx;
+}
+
+.com-good-list .cell .a .retail_price{
+  display:block;
+  margin: 0rpx 0rpx 0rpx 15rpx;
+  color: #ff0000; 
+  font-size: 26rpx;
+}
+

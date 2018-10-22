@@ -15,8 +15,6 @@ Component({
     goodslist: {
       type: Array,
       observer: function (newVal, oldVal, changedPath) {
-        console.log(">>>>>>>>>>>>>>> init goodslist");
-        console.dir(this.data);
       }
     }
   },

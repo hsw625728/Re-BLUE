@@ -1,6 +1,9 @@
 var appDef = require('../erbgServices/appDef.js');
 
 function getImage(img) {
+  if (typeof(img) == "string") {
+    return img;
+  }
   switch (img[0]) {
     case 0:
       {
@@ -20,7 +23,6 @@ function getImage(img) {
   }
 }
 
-module.exports = 
-{
+module.exports = {
   getImage: getImage
 }

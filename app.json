@@ -32,7 +32,10 @@
     "pages/shopping/address/address",
     "pages/shopping/addressAdd/addressAdd",
     "pages/goods/goods",
-    "pages/topicDetail/topicDetail"
+    "pages/topicDetail/topicDetail",
+    "erbgView/index/index",
+    "erbgView/search/search",
+    "erbgView/goods/goods"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -66,7 +69,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "pages/topic/topic",
+        "pagePath": "erbgView/search/search",
         "iconPath": "static/images/ic_menu_topic_nor.png",
         "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
         "text": "专题"
