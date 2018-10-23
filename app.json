@@ -35,7 +35,8 @@
     "pages/topicDetail/topicDetail",
     "erbgView/index/index",
     "erbgView/search/search",
-    "erbgView/goods/goods"
+    "erbgView/goods/goods",
+    "erbgView/car/car"
   ],
   "window": {
     "backgroundTextStyle": "dark",
