@@ -1,7 +1,17 @@
 <!--erbgView/index/index.wxml-->
 <view class="container">
+<view class="search-header">
+    <view class="input-box">
+      <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="onKeywordConfirm" confirm-type="search" placeholder="{{defaultKeyword.keyword}}" />
+    </view>
+  </view>
+  <view class="m-menu">
+    <navigator class="item" url="/erbgView/goods/goods" wx:for="{{banner}}" wx:key="{{item.id}}">
+      <text>{{item.name}}</text>
+    </navigator>
+  </view>
   <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="1000">
-    <swiper-item wx:for="{{banner}}" wx:key="{{item.goodsid}}">
+    <swiper-item wx:for="{{goodslist}}" wx:key="{{item.goodsid}}">
       <navigator url="/erbgView/goods/goods?goodsid={{item.goodsid}}">
         <image src="{{item.img}}" background-size="cover"></image>
       </navigator>

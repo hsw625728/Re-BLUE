@@ -20,6 +20,11 @@ function getImage(img) {
         return appDef.ApiImgUrl + "static/img/picture/" + img[1] + ".png";
       }
       break;
+    case 3:
+      {
+        return appDef.ApiImgUrl + "static/img/home/" + img[1] + ".jpg";
+      }
+      break;
     default:
       {
         return "static/images/ic_menu_sort_nor.png";

@@ -1,5 +1,6 @@
 {
   "pages": [
+    "erbgView/index/index",
     "pages/index/index",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",
@@ -33,7 +34,6 @@
     "pages/shopping/addressAdd/addressAdd",
     "pages/goods/goods",
     "pages/topicDetail/topicDetail",
-    "erbgView/index/index",
     "erbgView/search/search",
     "erbgView/goods/goods",
     "erbgView/car/car"
@@ -52,7 +52,7 @@
     "color": "#666",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "erbgView/index/index",
         "iconPath": "static/images/ic_menu_choice_nor.png",
         "selectedIconPath": "static/images/ic_menu_choice_pressed.png",
         "text": "商城"

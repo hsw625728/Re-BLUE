@@ -26,17 +26,13 @@ indexController.prototype.onLoad = function(options, callback) {
 
   if (appDef.NoneServiceMode) {
     that.data = {
-      banner: [{ img: imageToolkit.getImage([1, "index1"]), goodsid: "x00000001" }, 
-        { img: imageToolkit.getImage([1, "index2"]), goodsid: "x00000002" }],
-      goodslist: [{ goodsid: "x00000001", img: imageToolkit.getImage([1, "buy1"]), name: "啊啊啊啊啊啊啊啊", issue_price: 9999.00, retail_price: 1.00 },
-        { goodsid: "x00000002", img: imageToolkit.getImage([1, "buy2"]), name: "啊啊啊啊", issue_price: 2333.00, retail_price: 23.00 },
-        { goodsid: "x00000003", img: imageToolkit.getImage([1, "buy3"]), name: "啊啊", issue_price: 2333.00, retail_price: 1.00 },
-        { goodsid: "x00000001", img: imageToolkit.getImage([1, "buy1"]), name: "啊啊啊啊啊啊啊啊", issue_price: 9999.00, retail_price: 1.00 },
-        { goodsid: "x00000002", img: imageToolkit.getImage([1, "buy2"]), name: "啊啊啊啊", issue_price: 2333.00, retail_price: 2333.00 },
-        { goodsid: "x00000003", img: imageToolkit.getImage([1, "buy3"]), name: "啊啊", issue_price: 2333.00, retail_price: 2333.00 },
-        { goodsid: "x00000001", img: imageToolkit.getImage([1, "buy1"]), name: "啊啊啊啊啊啊啊啊", issue_price: 9999.00, retail_price: 9999.00 },
-        { goodsid: "x00000002", img: imageToolkit.getImage([1, "buy2"]), name: "啊啊啊啊", issue_price: 2333.00, retail_price: 233.00 },
-        { goodsid: "x00000003", img: imageToolkit.getImage([1, "buy3"]), name: "啊啊", issue_price: 2333.00, retail_price: 1.00 }]
+      banner: [{ img: imageToolkit.getImage([3, "home1"]), name: "全部商品",goodsid: "x00000001" }, 
+        { img: imageToolkit.getImage([3, "home1"]), name: "本周上新",goodsid: "x00000002" },
+        { img: imageToolkit.getImage([3, "home1"]), name: "定制搭配", goodsid: "x00000002" }],
+      goodslist: [{ goodsid: "x00000001", img: imageToolkit.getImage([3, "home1"]), name: "啊啊啊", issue_price: 9999.00, retail_price: 1.00 },
+        { goodsid: "x00000002", img: imageToolkit.getImage([3, "home2"]), name: "啊啊", issue_price: 2333.00, retail_price: 1.00 },
+        { goodsid: "x00000003", img: imageToolkit.getImage([3, "home5"]), name: "啊啊啊", issue_price: 9999.00, retail_price: 1.00 },
+        { goodsid: "x00000004", img: imageToolkit.getImage([3, "home4"]), name: "啊啊啊", issue_price: 2333.00, retail_price: 2333.00 },]
     };
     callback();
   } else {
