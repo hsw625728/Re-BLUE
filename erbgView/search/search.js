@@ -8,7 +8,9 @@ Page({
   controller: searchController.createController(this),
   initCallBack: function() {
     this.setData(this.controller.data);
-    this.setData({ showTopAni: ""})
+    this.setData({
+      showTopAni: ""
+    })
   },
 
   touchToolkit: touchToolkit.touchToolkit(),
@@ -79,7 +81,9 @@ Page({
   },
 
   onTapSortSwitch: function() {
-    this.setData({ showTypeList: !this.data.showTypeList });
+    this.setData({
+      showTypeList: !this.data.showTypeList
+    });
   },
 
   touchStart: function(event) {
@@ -87,18 +91,23 @@ Page({
   },
 
   touchMove: function(event) {
-    this.touchToolkit.touchMove(event);
-    console.log(">>>>>>>>>>>>>>>>>>>>>> showTopAni " + this.touchToolkit.touchMode);
-    if (this.touchToolkit.touchMode == "up")
-    {
-      this.setData({ showTopAni: " hide" });
-      console.log(">>>>>>>>>>>>>>>>>>>>>> showTopAni: hide ");
-    }
-    else if (this.touchToolkit.touchMove == "down")
-    {
-      this.setData({ showTopAni: " show" });
-      console.log(">>>>>>>>>>>>>>>>>>>>>> showTopAni: show ");
-    }
+    let that = this;
+
+    this.touchToolkit.touchMove(event, function() {
+      if (that.touchToolkit.touchMode == "up") {
+        if (that.data.showTopAni != " show") {
+          that.setData({
+            showTopAni: " show"
+          });
+        }
+      } else if (that.touchToolkit.touchMode == "down") {
+        if (that.data.showTopAni != " hide") {
+          that.setData({
+            showTopAni: " hide"
+          });
+        }
+      }
+    });
   },
 
   touchEnd: function(event) {

@@ -5,6 +5,7 @@
       <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="onKeywordConfirm" confirm-type="search" placeholder="{{defaultKeyword.keyword}}" />
     </view>
   </view>
+  <view class="{{'search-header-back'+showTopAni}}"></view>
   <view class="search-result">
     <view class="{{'sort'+showTopAni}}">
       <view class="sort-box">

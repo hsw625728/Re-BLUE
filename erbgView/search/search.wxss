@@ -1,10 +1,7 @@
 /* erbgView/search/search.wxss */
 
-body {
-}
-
-.container {
-  margin-top: 167rpx;
+page{
+  background: #f4f4f4;
 }
 
 .search-header {
@@ -18,7 +15,7 @@ body {
   padding: 0 31.25rpx;
   font-size: 29rpx;
   color: #333;
-  -webkit-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
   -webkit-animation-timing-function: ease;
   -webkit-animation-delay: 0s;
   -webkit-animation-play-state: running;
@@ -33,6 +30,24 @@ body {
   -webkit-animation-name: headerhide;
 }
 
+.search-header-back {
+  width: 750rpx;
+  height: 91rpx;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.search-header-back.show {
+  -webkit-animation-name: headershow;
+}
+
+.search-header-back.hide {
+  -webkit-animation-name: headerhide;
+}
+
 @keyframes headershow {
   0% {
     height: 0rpx;
@@ -43,7 +58,7 @@ body {
 }
 
 @keyframes headerhide {
-   0% {
+  0% {
     height: 91rpx;
   }
   100% {
@@ -70,7 +85,7 @@ body {
   width: 100%;
   height: 78rx;
 
-  -webkit-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
   -webkit-animation-timing-function: ease;
   -webkit-animation-delay: 0s;
   -webkit-animation-play-state: running;
@@ -173,6 +188,7 @@ body {
 }
 
 .search-result .body {
+  height: 145rpx;
 }
 
 .cate-item {
