@@ -73,6 +73,27 @@ Page({
     });
 */
   },
+  cancelOrder: function(event) {
+    let id = event.target.dataset.orderId;
+    console.log('取消订单（'+id+")");
+    wx.showModal({
+      title: '提示信息',
+      content: '要取消此订单？',
+      showCancel: true,
+      success: function (res) {
+        if (res.confirm) {
+          console.log('取消订单（' + id + ")");
+          util.request(api.OrderCancel, { orderId: id }, 'POST').then(function (res) {
+            console.log('res=（' + res.status + ")");
+          });
+          console.log('取消订单（' + id + ")");
+          console.log('用户点击确定');
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
   onReady: function () {
     // 页面渲染完成
   },

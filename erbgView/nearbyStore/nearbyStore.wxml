@@ -1,0 +1,25 @@
+<!--erbgView/nearbyStore/nearbyStore.wxml-->
+<view class="container">
+  <view class="m-menu">
+    <navigator class="item" url="/erbgView/nearbyStore/nearbyStore" >
+      <text>地址</text>
+    </navigator>
+    <navigator class="item" url="/erbgView/nearbyStore/nearbyStore" >
+      <text>所有品牌</text>
+    </navigator>
+  </view>
+  <view class="addressList">
+    <view class="cell" wx:for="{{addressList}}" wx:for-index="idx" wx:key="{{item.goodsid}}">
+      <navigator url="{{jumpUrl}}{{item.goodsid}}" class="a">
+        <image class="img" src="{{item.img}}" background-size="cover"></image>
+        <view class="info">
+          <view class="name">{{item.name}}</view>
+          <view class="address">
+            <view class="addressText">{{item.address}}</view>
+            <view class="addressText">{{item.distance}}</view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>
