@@ -3,10 +3,11 @@
 var indexController = require('../../erbgServices/indexController.js');
 
 Page({
-
+/*
   controller: indexController.createController(this),
+  */
   initCallBack: function () {
-    this.setData(this.controller.data);
+    this.setData(indexController.data);
   },
 
   /**
@@ -20,7 +21,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.controller.onLoad(options, this.initCallBack);
+    indexController.onLoad(options, this.initCallBack);
   },
 
   /**
@@ -55,7 +56,24 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    /* 以后可能用得到
+    // 动态设置导航条标题
+    wx.setNavigationBarTitle({
+      title: ''
+    });
+    wx.showNavigationBarLoading(); //在标题栏中显示加载图标
 
+    wx.hideNavigationBarLoading();                   //完成停止加载
+    // 动态设置导航条标题
+    wx.setNavigationBarTitle({
+      title: '我的'
+    });
+    */
+
+    indexController.onLoad(options, function () {
+      this.initCallBack();
+      wx.stopPullDownRefresh();
+    });
   },
 
   /**

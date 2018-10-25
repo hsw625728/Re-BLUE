@@ -13,45 +13,44 @@ var service = require('../erbgServices/service.js');
 //  banner: [{ img: "", goodId: "x00000001" }, { img: "", goodId: "x00000002" }],
 //};
 
-function indexController(view) {
-  this.serviceUrl = appDef.RootUrl + "/goods";
-  this.data = {
-    img: []
+
+class goodsController {
+  constructor(name) {
+    this.serviceUrl = appDef.RootUrl + "/goods";
+    this.data = {
+      img: []
+    };
+  }
+
+  onLoad = function (options, callback) {
+    let that = this;
+
+    if (appDef.NoneServiceMode) {
+      that.data = { img: [imageToolkit.getImage([1, "buy1"]), imageToolkit.getImage([1, "buy2"]), imageToolkit.getImage([1, "buy3"])] };
+      callback();
+    } else {
+      service.wxtoolkit.request(that.serviceUrl, {
+        goodsid: options.goodsid
+      }).then(function (res) {
+        var img = [];
+        for (let i in res.img) {
+          img.push(imageToolkit.getImage(res.img[i]));
+        }
+        that.data.img = img;
+
+        callback();
+      }).catch(function (reason) {
+
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+        console.log('>>>>>> error：' + that.serviceUrl);
+        console.log('>>>>>> error：options ::');
+        console.dir(options);
+        console.log('>>>>>> error：' + reason);
+        console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+
+      });
+    }
   };
 }
 
-indexController.prototype.onLoad = function(options, callback) {
-  let that = this;
-  
-  if (appDef.NoneServiceMode) {
-    that.data = { img: [imageToolkit.getImage([1, "buy1"]), imageToolkit.getImage([1, "buy2"]), imageToolkit.getImage([1, "buy3"])] };
-    callback();
-  } else {
-    service.wxtoolkit.request(that.serviceUrl, {
-      goodsid: options.goodsid
-    }).then(function(res) {
-      var img = [];
-      for (let i in res.img) {
-        img.push(imageToolkit.getImage(res.img[i]));
-      }
-      that.data.img = img;
-
-      callback();
-    }).catch(function(reason) {
-
-      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-      console.log('>>>>>> error：' + that.serviceUrl);
-      console.log('>>>>>> error：options ::');
-      console.dir(options);
-      console.log('>>>>>> error：' + reason);
-      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-
-    });
-  }
-};
-
-module.exports = {
-  createController: function() {
-    return new indexController();
-  }
-}
+module.exports = new goodsController();

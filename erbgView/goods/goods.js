@@ -4,9 +4,8 @@ var goodsController = require('../../erbgServices/goodsController.js');
 
 Page({
 
-  controller: goodsController.createController(this),
   initCallBack: function () {
-    this.setData(this.controller.data);
+    this.setData(goodsController.data);
   },
 
   /**
@@ -20,7 +19,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.controller.onLoad(options, this.initCallBack);
+    goodsController.onLoad(options, this.initCallBack);
   },
 
   /**
