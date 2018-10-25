@@ -1,17 +1,17 @@
 <!--erbgView/search/search.wxml-->
 <view class="container">
-  <view class="search-header">
+  <view class="{{'search-header'+showTopAni}}">
     <view class="input-box">
       <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="onKeywordConfirm" confirm-type="search" placeholder="{{defaultKeyword.keyword}}" />
     </view>
   </view>
   <view class="search-result">
-    <view class="sort">
+    <view class="{{'sort'+showTopAni}}">
       <view class="sort-box">
         <view class="item">
           <text class="txt">综合</text>
         </view>
-        <view class="item" bindtap="openSortFilter" id="priceSort">
+        <view class="item" id="priceSort">
           <text class="txt">价格</text>
         </view>
         <view class="item">
@@ -22,7 +22,7 @@
         </view>
       </view>
     </view>
-    <view class="body">
+    <view class="body" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
       <view wx:if="{{!showTypeList}}">
         <com-good-grid goodslist="{{searchlist}}"></com-good-grid>
       </view>

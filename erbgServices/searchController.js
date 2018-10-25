@@ -26,7 +26,7 @@ searchController.prototype.onLoad = function (options, callback) {
 
   if (appDef.NoneServiceMode) {
     that.data = {
-      searchlist: [{ goodsid: "x00000001", img: imageToolkit.getImage([2, "18A0020200"]), name: "啊啊啊啊啊啊啊啊", issue_price: 9999.00, retail_price: 1.00 },
+      searchlist: [{ goodsid: "x00000001", img: imageToolkit.getImage([2, "18A0020200"]), name: "啊啊啊啊啊啊啊啊", issue_price: 9999.00, retail_price: 1.00},
         { goodsid: "x00000002", img: imageToolkit.getImage([2, "18A0020500"]), name: "啊啊啊啊", issue_price: 2333.00, retail_price: 23.00 },
         { goodsid: "x00000003", img: imageToolkit.getImage([2, "18A0020701"]), name: "啊啊", issue_price: 2333.00, retail_price: 1.00 },
         { goodsid: "x00000001", img: imageToolkit.getImage([2, "18A0050100"]), name: "啊啊啊啊啊啊啊啊", issue_price: 9999.00, retail_price: 1.00 },

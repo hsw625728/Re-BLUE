@@ -1,8 +1,10 @@
 /* erbgView/search/search.wxss */
 
+body {
+}
+
 .container {
   margin-top: 167rpx;
-  background: #f4f4f4;
 }
 
 .search-header {
@@ -16,6 +18,37 @@
   padding: 0 31.25rpx;
   font-size: 29rpx;
   color: #333;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.search-header.show {
+  -webkit-animation-name: headershow;
+}
+
+.search-header.hide {
+  -webkit-animation-name: headerhide;
+}
+
+@keyframes headershow {
+  0% {
+    height: 0rpx;
+  }
+  100% {
+    height: 91rpx;
+  }
+}
+
+@keyframes headerhide {
+   0% {
+    height: 91rpx;
+  }
+  100% {
+    height: 0rpx;
+  }
 }
 
 .search-header .input-box {
@@ -30,132 +63,163 @@
   background: #f4f4f4;
 }
 
-.sort{
-    position: fixed;
+.sort {
+  position: fixed;
+  top: 91rpx;
+  background: #fff;
+  width: 100%;
+  height: 78rx;
+
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.sort.show {
+  -webkit-animation-name: headerposshow;
+}
+
+.sort.hide {
+  -webkit-animation-name: headerposhide;
+}
+
+@keyframes headerposshow {
+  0% {
+    top: 0rpx;
+  }
+
+  100% {
     top: 91rpx;
-    background: #fff;
-    width: 100%;
-    height: 78rpx;
+  }
 }
 
-.sort-box{
-    background: #fff;
-    width: 100%;
-    height: 78rpx;
-    overflow: hidden;
-    padding: 0 30rpx;
-    display: flex;
-    border-bottom: 1px solid #d9d9d9;
+@keyframes headerposhide {
+  0% {
+    top: 91rpx;
+  }
+  100% {
+    top: 0rpx;
+  }
 }
 
-.sort-box .item{
-    height: 78rpx;
-    line-height: 78rpx;
-    text-align: center;
-    flex:1;
-    color: #333;
-    font-size: 30rpx;
+.sort-box {
+  background: #fff;
+  width: 100%;
+  height: 78rpx;
+  overflow: hidden;
+  padding: 0 30rpx;
+  display: flex;
+  border-bottom: 1px solid #d9d9d9;
 }
 
-.sort-box .item .txt{
-    display: block;
-    width: 100%;
-    height: 100%;
-    color: #333;
+.sort-box .item {
+  height: 78rpx;
+  line-height: 78rpx;
+  text-align: center;
+  flex: 1;
+  color: #333;
+  font-size: 30rpx;
 }
 
-.sort-box .item.active .txt{
-    color: #b4282d;
+.sort-box .item .txt {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #333;
 }
 
-.sort-box .item.by-price{
-    background: url(//yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/no-3127092a69.png) 155rpx center no-repeat;
-    background-size: 15rpx 21rpx;
+.sort-box .item.active .txt {
+  color: #b4282d;
 }
 
-.sort-box .item.by-price.active.asc{
-    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/up-636b92c0a5.png) 155rpx center no-repeat;
-    background-size: 15rpx 21rpx;
+.sort-box .item.by-price {
+  background-size: 15rpx 21rpx;
 }
 
-.sort-box .item.by-price.active.desc{
-    background: url(http://yanxuan.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/down-95e035f3e5.png) 155rpx center no-repeat;
-    background-size: 15rpx 21rpx;
+.sort-box .item.by-price.active.asc {
+  background-size: 15rpx 21rpx;
 }
 
-.sort-box-category{
-    background: #fff;
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    padding: 40rpx 40rpx 0 0;
-    border-bottom: 1px solid #d9d9d9;
+.sort-box .item.by-price.active.desc {
+  background-size: 15rpx 21rpx;
 }
 
-.sort-box-category .item{
-    height: 54rpx;
-    line-height: 54rpx;
-    text-align: center;
-    float: left;
-    padding: 0 16rpx;
-    margin: 0 0 40rpx 40rpx;
-    border: 1px solid #666;
-    color: #333;
-    font-size: 24rpx;
+.sort-box-category {
+  background: #fff;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 40rpx 40rpx 0 0;
+  border-bottom: 1px solid #d9d9d9;
 }
 
-.sort-box-category .item.active{
-    color: #b4282d;
-    border: 1px solid #b4282d;
+.sort-box-category .item {
+  height: 54rpx;
+  line-height: 54rpx;
+  text-align: center;
+  float: left;
+  padding: 0 16rpx;
+  margin: 0 0 40rpx 40rpx;
+  border: 1px solid #666;
+  color: #333;
+  font-size: 24rpx;
 }
 
-.search-result .body{
-}
-.cate-item{
-    margin-top: 175rpx;
-    height: auto;
-    overflow: hidden;
+.sort-box-category .item.active {
+  color: #b4282d;
+  border: 1px solid #b4282d;
 }
 
-.cate-item .h{
-    height: 145rpx;
-    width: 750rpx;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.search-result .body {
 }
 
-.cate-item .h .name{
-    display: block;
-    height: 35rpx;
-    margin-bottom: 18rpx;
-    font-size: 30rpx;
-    color: #333;
+.cate-item {
+  margin-top: 175rpx;
+  height: auto;
+  overflow: hidden;
 }
 
-.cate-item .h .desc{
-    display: block;
-    height: 24rpx;
-    font-size: 24rpx;
-    color: #999;
+.cate-item .h {
+  height: 145rpx;
+  width: 750rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.cate-item .b{
+.cate-item .h .name {
+  display: block;
+  height: 35rpx;
+  margin-bottom: 18rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.cate-item .h .desc {
+  display: block;
+  height: 24rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.cate-item .b {
   width: 750rpx;
   padding: 0 6.25rpx;
   height: auto;
   overflow: hidden;
 }
 
-.cate-item .list-filter{
-    height: 80rpx;
-    width: 100%;
-    background: #fff;
-    margin-bottom: 6.25rpx;
+.cate-item .list-filter {
+  height: 80rpx;
+  width: 100%;
+  background: #fff;
+  margin-bottom: 6.25rpx;
 }
 
-.cate-item .b .item{
+.cate-item .b .item {
   float: left;
   background: #fff;
   width: 365rpx;
@@ -166,16 +230,16 @@
   text-align: center;
 }
 
-.cate-item .b .item-b{
+.cate-item .b .item-b {
   margin-left: 6.25rpx;
 }
 
-.cate-item .item .img{
+.cate-item .item .img {
   width: 302rpx;
   height: 302rpx;
 }
 
-.cate-item .item .name{
+.cate-item .item .name {
   display: block;
   width: 365.625rpx;
   height: 35rpx;
@@ -187,7 +251,7 @@
   color: #333;
 }
 
-.cate-item .item .price{
+.cate-item .item .price {
   display: block;
   width: 365.625rpx;
   height: 30rpx;
