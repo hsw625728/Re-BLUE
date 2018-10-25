@@ -100,7 +100,7 @@ page{
     float: right;
 }
 
-.order .b .btn{
+.order .b .btnred{
     margin-top: 19rpx;
     height: 64.5rpx;
     line-height: 64.5rpx;
@@ -110,4 +110,16 @@ page{
     font-size: 28rpx;
     color: #fff;
     background: #b4282d;
+}
+
+.order .b .btnwhite{
+    margin-top: 19rpx;
+    height: 64.5rpx;
+    line-height: 64.5rpx;
+    text-align: center;
+    padding: 0 20rpx;
+    border-radius: 5rpx;
+    font-size: 28rpx;
+    color: #333;
+    background: #fff;
 }
