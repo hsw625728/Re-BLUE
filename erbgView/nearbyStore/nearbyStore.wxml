@@ -11,13 +11,17 @@
   <view class="addressList">
     <view class="cell" wx:for="{{addressList}}" wx:for-index="idx" wx:key="{{item.goodsid}}">
       <navigator url="{{jumpUrl}}{{item.goodsid}}" class="a">
-        <image class="img" src="{{item.img}}" background-size="cover"></image>
+        <view class="imgv">
+          <image class="img" src="{{item.img}}" background-size="contain" ></image>
+        </view>
         <view class="info">
           <view class="name">{{item.name}}</view>
+          <view class="name">电话：{{item.tel}}</view>
+          <view class="name">{{item.address}}</view>
           <view class="address">
             <view class="addressText">{{item.address}}</view>
-            <view class="addressText">{{item.distance}}</view>
-          </view>
+            <view class="addressText">{{item.distance}}</view> 
+          </view> 
         </view>
       </navigator>
     </view>
