@@ -75,7 +75,7 @@
         "pagePath": "erbgView/nearbyStore/nearbyStore",
         "iconPath": "static/images/ic_menu_topic_nor.png",
         "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
-        "text": "专题"
+        "text": "附近商店"
       },
       {
         "pagePath": "pages/ucenter/index/index",

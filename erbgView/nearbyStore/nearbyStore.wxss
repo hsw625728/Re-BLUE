@@ -60,10 +60,9 @@
 }
 
 .addressList .cell .a .imgv .img {
-  margin-left: 30%;
-  margin-top: 35%;
+  margin:auto auto;
   width: 100rpx;
-  height: 70rpx;
+  height: 30rpx;
   border-radius: 5rpx;
 }
 
