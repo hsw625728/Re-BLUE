@@ -2,6 +2,7 @@
   "pages": [
     "erbgView/index/index",
     "pages/index/index",
+    "erbgView/nearbyStore/nearbyStore",
     "pages/catalog/catalog",
     "pages/newGoods/newGoods",
     "pages/hotGoods/hotGoods",
@@ -36,7 +37,8 @@
     "pages/topicDetail/topicDetail",
     "erbgView/search/search",
     "erbgView/goods/goods",
-    "erbgView/car/car"
+    "erbgView/car/car",
+    "erbgView/storeInfo/storeInfo"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -70,7 +72,7 @@
         "text": "购物车"
       },
       {
-        "pagePath": "erbgView/search/search",
+        "pagePath": "erbgView/nearbyStore/nearbyStore",
         "iconPath": "static/images/ic_menu_topic_nor.png",
         "selectedIconPath": "static/images/ic_menu_topic_pressed.png",
         "text": "专题"
