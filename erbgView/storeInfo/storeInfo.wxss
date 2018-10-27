@@ -1,1 +1,73 @@
 /* erbgView/storeInfo/storeInfo.wxss */
+.imgv {
+  display:flex;
+  width: 750rpx;
+  height: 450rpx;
+  background: rgb(255, 255, 255);
+  border-radius: 1rpx;
+}
+
+.imgv .img {
+  margin:auto auto;
+  width: 450rpx;
+  height: 125rpx;
+}
+
+.order-bottom{
+    padding-left: 31.25rpx;
+    height: auto;
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 5rpx;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.order-bottom .address{
+    height: 80rpx;
+    padding-top: 25rpx;   
+}
+
+.order-bottom .address .name{
+    float:left;
+    flex:1;
+    height: 35rpx;
+    width: 48%;
+    line-height: 35rpx;
+    font-size: 25rpx;
+}
+
+.order-bottom .address .mobile{
+    float:right;
+    flex:1;
+    width: 48%;
+    height: 35rpx;
+    line-height: 35rpx;
+    font-size: 25rpx;
+}
+
+.section-nav {
+  width: 750rpx;
+  height: 108rpx;
+  background: #fff;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.section-nav .t {
+  float: left;
+  width: 600rpx;
+  height: 108rpx;
+  line-height: 108rpx;
+  font-size: 25rpx;
+  color: #333;
+  margin-left: 31.25rpx;
+}
+
+.section-nav .i {
+  float: right;
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 16rpx;
+  margin-top: 28rpx;
+}
+
+

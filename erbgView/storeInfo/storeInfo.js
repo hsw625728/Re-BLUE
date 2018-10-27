@@ -10,16 +10,37 @@ Page({
     addressCur:{}
   },
 
+  tel: function () {
+    let that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.data.addressCur.tel, //此号码仅用于测试 。
+
+      success: function () {
+        console.log("拨打电话成功！")
+      },
+
+      fail: function () {
+        console.log("拨打电话失败！")
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this;
     let addressList = nearbyStoreController.data.addressList;
-    
+    //console.log("onLoad!!!!!!!");
     for (let address of addressList) {
-      if (address.addressId === options.addressId)
+      if (address.addressId == options.id)
       {
-        addressCur = address;
+        console.log("++++++++++++++++++++++++++++++++++");
+        console.log(address.img);
+        console.log(address.addressId);
+        that.setData({
+          addressCur: address
+        });
+        
       }
 
     }
