@@ -2,7 +2,7 @@
 <view class="container">
 <view class="search-header">
     <view class="input-box">
-      <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="onKeywordConfirm" confirm-type="search" placeholder="{{defaultKeyword.keyword}}" />
+      <input name="input" class="keywrod" focus="{{false}}" />
     </view>
   </view>
   <view class="m-menu">

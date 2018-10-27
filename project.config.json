@@ -8,10 +8,11 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.3.0",
+	"libVersion": "2.3.1",
 	"appid": "wxd7a0cd12bff6ee66",
 	"projectname": "Re-BLUE",
 	"debugOptions": {

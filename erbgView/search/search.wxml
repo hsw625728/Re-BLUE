@@ -2,10 +2,9 @@
 <view class="container">
   <view class="{{'search-header'+showTopAni}}">
     <view class="input-box">
-      <input name="input" class="keywrod" focus="true" value="{{keyword}}" confirm-type="search" bindinput="inputChange" bindfocus="inputFocus" bindconfirm="onKeywordConfirm" confirm-type="search" placeholder="{{defaultKeyword.keyword}}" />
+      <input name="input" class="keywrod" focus="{{false}}" />
     </view>
   </view>
-  <view class="{{'search-header-back'+showTopAni}}"></view>
   <view class="search-result">
     <view class="{{'sort'+showTopAni}}">
       <view class="sort-box">
@@ -23,11 +22,11 @@
         </view>
       </view>
     </view>
-    <view class="body" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
-      <view wx:if="{{!showTypeList}}">
+    <view class="body">
+      <view wx:if="{{!showTypeList}}" id="clientbody">
         <com-good-grid goodslist="{{searchlist}}"></com-good-grid>
       </view>
-      <view wx:if="{{showTypeList}}">
+      <view wx:if="{{showTypeList}}" id="clientbody">
         <com-good-list goodslist="{{searchlist}}"></com-good-list>
       </view>
     </view>

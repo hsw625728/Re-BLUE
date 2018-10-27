@@ -43,6 +43,15 @@
   background: #f4f4f4;
 }
 
+.search-header .keywrod{
+    position: absolute;
+    top: 0;
+    left: 40rpx;
+    width: 506rpx;
+    height: 59rpx;
+    padding-left: 30rpx;
+}
+
 .m-menu {
   display: flex;
   height: 80rpx;

@@ -98,5 +98,9 @@ Page({
     this.setData({
       flag: !this.data.flag
     });
+  },
+
+  inputFocus: function() {
+
   }
 })
