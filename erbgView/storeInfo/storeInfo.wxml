@@ -9,10 +9,10 @@
       <text class="mobile">营业时间：10：00-22：00 </text>
     </view>
   </view>
-  <view class="section-nav" bindtap="switchAttrPop">
+  <navigator class="section-nav" url="/erbgView/map/map?latitude={{addressCur.latitude}}&longitude={{addressCur.longitude}}">
     <view class="t">{{addressCur.address}}</view>
     <image class="i" src="../../static/images/address_right.png" background-size="cover"></image>
-  </view>
+  </navigator>
   <view class="section-nav" bindtap="tel">
       <view class="t">{{addressCur.tel}}</view>
       <image class="i" src="../../static/images/address_right.png" background-size="cover"></image>

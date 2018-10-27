@@ -1,0 +1,8 @@
+<!--erbgView/map/map.wxml-->
+<view class="container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" markers="{{markers}}"   include-points="{{includePoints}}" bindmarkertap="makertap" bindcontroltap="clickcontrol" bindregionchange="mapchange">
+    <cover-view class="reset" bindtap="reset">
+      <cover-image class="img" src="../../static/images/icon_close.png" />
+    </cover-view>
+  </map>
+</view>

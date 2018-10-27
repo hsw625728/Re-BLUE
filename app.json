@@ -38,7 +38,8 @@
     "erbgView/search/search",
     "erbgView/goods/goods",
     "erbgView/car/car",
-    "erbgView/storeInfo/storeInfo"
+    "erbgView/storeInfo/storeInfo",
+    "erbgView/map/map"
   ],
   "window": {
     "backgroundTextStyle": "dark",

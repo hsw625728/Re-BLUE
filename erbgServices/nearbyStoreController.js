@@ -25,9 +25,10 @@ class nearbyStoreController {
 
     if (appDef.NoneServiceMode) {
       that.data = {
-        addressList: [{ addressId: 1 , img: imageToolkit.getImage([4, "ERBG"]), city: "北京", name: "北京合生汇", address: "北京市朝阳区西大望路甲22号合生汇购物中心L2-08号", distance: "100km", tel: "010-87725802‬", score: 5 }, 
-          { addressId: 2, img: imageToolkit.getImage([4, "ERBG"]), city: "北京", name: "北京国瑞城", address: "北京市东城区崇文门外大街18号1幢国瑞购物中心F1-14号", distance: "100km", tel: "010-67104451‬", score: 5 }, 
-          { addressId: 3, img: imageToolkit.getImage([4, "ERBG"]), city: "杭州", name: "杭州滨江宝龙", address: "杭州市滨江区滨盛路3867号滨江宝龙城1区1号楼F1-059", distance: "100km", tel: "0571-86919735‬", score: 5 }, 
+        addressList: [{
+          addressId: 1, img: imageToolkit.getImage([4, "ERBG"]), city: "北京", name: "北京合生汇", address: "北京市朝阳区西大望路甲22号合生汇购物中心L2-08号", longitude: "116.476215", latitude: "39.89249", distance: "100km", tel: "010-87725802‬", score: 5 }, 
+          { addressId: 2, img: imageToolkit.getImage([4, "ERBG"]), city: "北京", name: "北京国瑞城", address: "北京市东城区崇文门外大街18号1幢国瑞购物中心F1-14号", longitude: "116.416551", latitude: "39.896706", distance: "100km", tel: "010-67104451‬", score: 5 }, 
+          { addressId: 3, img: imageToolkit.getImage([4, "ERBG"]), city: "杭州", name: "杭州滨江宝龙", address: "杭州市滨江区滨盛路3867号滨江宝龙城1区1号楼F1-059", longitude: "116.890196", latitude: "39.789764", distance: "100km", tel: "0571-86919735‬", score: 5 }, 
           ]
       };
       callback();

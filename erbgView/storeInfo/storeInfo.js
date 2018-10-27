@@ -37,6 +37,8 @@ Page({
         console.log("++++++++++++++++++++++++++++++++++");
         console.log(address.img);
         console.log(address.addressId);
+        console.log(address.latitude);
+        console.log(address.longitude);
         that.setData({
           addressCur: address
         });
