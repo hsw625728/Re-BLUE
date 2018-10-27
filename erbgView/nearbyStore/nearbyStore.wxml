@@ -9,8 +9,8 @@
     </navigator>
   </view>
   <view class="addressList">
-    <view class="cell" wx:for="{{addressList}}" wx:for-index="idx" wx:key="{{item.goodsid}}">
-      <navigator url="{{jumpUrl}}{{item.goodsid}}" class="a">
+    <view class="cell" wx:for="{{addressList}}" wx:for-index="idx" wx:key="{{item.addressId}}">
+      <navigator url="../storeInfo/storeInfo?id={{item.addressId}}" class="a">
         <view class="imgv">
           <image class="img" src="{{item.img}}" background-size="contain" ></image>
         </view>
