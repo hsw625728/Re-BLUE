@@ -70,11 +70,13 @@ Page({
       title: '我的'
     });
     */
-
+    wx.stopPullDownRefresh();
+    /*
     nearbyStoreController.onLoad(options, function() {
       this.initCallBack();
       wx.stopPullDownRefresh();
     });
+    */
   },
 
   /**
