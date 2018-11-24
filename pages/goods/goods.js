@@ -18,11 +18,26 @@ Page({
     cartGoodsCount: 0,
     userHasCollect: 0,
     number: 1,
+    color: 'BLACK',
+    size: 'M',
     checkedSpecText: '请选择规格数量',
     openAttr: false,
     noCollectImage: "/static/images/icon_collect.png",
     hasCollectImage: "/static/images/icon_collect_checked.png",
     collectBackImage: "/static/images/icon_collect.png"
+  },
+  onChangeSize: function(e)
+  {
+    let that = this;
+    that.setData({
+      size: e.detail.key,
+    })
+  },
+  onChangeColor: function (e) {
+    let that = this;
+    that.setData({
+      color: e.detail.key,
+    })
   },
   getGoodsInfo: function () {
     let that = this;

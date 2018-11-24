@@ -1,1 +1,11 @@
-{}
+{
+  "navigationBarTitleText": "TabBar",
+  "usingComponents": {
+    "wux-icon": "../../dist/icon/index",
+    "wux-badge": "../../dist/badge/index",
+    "wux-tabbar": "../../dist/tabbar/index",
+    "wux-tabbar-item": "../../dist/tabbar-item/index",
+    "wux-tabs": "../../dist/tabs/index",
+    "wux-tab": "../../dist/tab/index"
+  }
+}

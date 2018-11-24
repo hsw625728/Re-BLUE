@@ -130,7 +130,19 @@
           <view class="value {{vitem.checked ? 'selected' : ''}}" bindtap="clickSkuValue" wx:for="{{item.valueList}}" wx:for-item="vitem" wx:key="{{vitem.id}}" data-value-id="{{vitem.id}}" data-name-id="{{vitem.specification_id}}">{{vitem.value}}</view>
         </view>
       </view>
-
+      <view class="sub-title">尺寸</view>
+      <wux-tabs controlled current="{{ size }}" bindchange="onChangeSize">
+          <wux-tab key="M" title="M"></wux-tab>
+          <wux-tab key="L" title="L"></wux-tab>
+          <wux-tab key="XL" title="XL"></wux-tab>
+          <wux-tab key="XXL" title="XXL"></wux-tab>
+      </wux-tabs>
+      <view class="sub-title">颜色</view>
+      <wux-tabs controlled current="{{ color }}" bindchange="onChangeColor">
+          <wux-tab key="BLACK" title="黑色"></wux-tab>
+          <wux-tab key="WHITE" title="白色"></wux-tab>
+          <wux-tab key="YELLOW" title="黄色"></wux-tab>
+      </wux-tabs>
       <view class="number-item">
         <view class="name">数量</view>
         <view class="selnum">
@@ -139,6 +151,7 @@
           <view class="add" bindtap="addNumber">+</view>
         </view>
       </view>
+
     </view>
   </view>
 </view>
